@@ -1,0 +1,2 @@
+-- Silver layer tables (placeholder)
+-- Add CREATE TABLE statements for curated/cleansed datasets.

@@ -1,0 +1,2 @@
+-- Gold layer tables (placeholder)
+-- Add CREATE TABLE statements for business-ready models.

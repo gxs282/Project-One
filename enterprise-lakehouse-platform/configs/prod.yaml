@@ -1,0 +1,7 @@
+env: prod
+spark:
+  app_name: enterprise-lakehouse-prod
+storage:
+  bronze: /mnt/bronze
+  silver: /mnt/silver
+  gold: /mnt/gold
