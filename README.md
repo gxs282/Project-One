@@ -1,27 +1,189 @@
-# 💫 About Me:
-👋 Hi, I’m Gaurav<br><br>I’m a Senior Data Engineer / Data Platform Engineer with experience building and operating large-scale, enterprise-grade data platforms used by business and analytics teams to make high-impact decisions. I specialize in Azure Databricks, Microsoft Fabric, Delta Lake, and Lakehouse architectures, with a strong track record of delivering reliable, scalable, and governed data systems in complex enterprise environments. My focus is on solving real business problems through sound engineering, not just writing pipelines.<br><br>🛠️ I’m currently working on<br><br>Designing production-grade Lakehouse architectures on Azure Databricks and Microsoft Fabric<br><br>Building high-throughput, incremental data pipelines (CDC, SCD, reprocessing-safe designs)<br><br>Implementing data governance and security using Unity Catalog and enterprise access models<br><br>Creating data validation, quality checks, and observability frameworks for mission-critical datasets<br><br>Optimizing cost, performance, and reliability of Spark-based workloads at scale<br><br>Enabling cross-platform data access (Delta ↔ Snowflake / downstream consumers)<br><br>🤝 I’m looking to collaborate on<br><br>Enterprise data platform engineering problems (scale, reliability, governance)<br><br>Internal data tooling or platform products used by multiple teams<br><br>Open-source or internal frameworks for data quality, testing, and monitoring<br><br>Architecture design reviews and best-practice discussions for modern Lakehouses<br><br>Early-stage data platform or analytics product ideas with real enterprise applicability<br><br>🧠 I’m looking for help with<br><br>Advanced architecture trade-offs at massive scale (cost vs performance vs governance)<br><br>Designing platform abstractions that reduce cognitive load for data consumers<br><br>Learning from teams that operate multi-petabyte data estates<br><br>Improving technical storytelling for leadership, design reviews, and exec forums<br><br>🌱 I’m currently learning<br><br>Deep internals of Microsoft Fabric and its fit for large enterprises<br><br>Advanced Spark optimization techniques and query planning behavior<br><br>Data platform design for AI/ML readiness<br><br>How top PBCs structure data engineering orgs and platform teams<br><br>Translating engineering decisions into measurable business impact<br><br>💬 Ask me about<br><br>Azure Databricks vs Microsoft Fabric decision-making<br><br>Designing fault-tolerant incremental pipelines<br><br>Data validation, testing strategies, and production hardening<br><br>Governance and security at scale (Unity Catalog, role-based access)<br><br>Turning data engineering into a reusable platform capability<br><br>What hiring managers actually look for in senior data engineers<br><br>⚡ Fun fact<br><br>I think about data engineering the way product companies do: if a system isn’t reliable, scalable, and easy to consume, it’s not production-ready—no matter how clever the code is.
+# Enterprise Lakehouse – Incremental Analytics Platform
 
+## Overview
+This repository implements a **production-grade Lakehouse data platform** designed to ingest, process, validate, and serve analytics-ready data using **incremental, idempotent, and reprocessing-safe pipelines**.  
+The project mirrors real-world enterprise data engineering patterns used in large product organizations, with a strong focus on **data correctness, scalability, observability, and governance**.
 
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/analyticsingh/) 
-
-# 💻 Tech Stack:
-![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=plastic&logo=graphql&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=plastic&logo=microsoftazure&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=plastic&logo=google-cloud&logoColor=white) ![Datadog](https://img.shields.io/badge/datadog-%23632CA6.svg?style=plastic&logo=datadog&logoColor=white) ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=plastic&logo=oracle&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=plastic&logo=amazon-aws&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=plastic&logo=firebase) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=plastic&logo=anaconda&logoColor=white) ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FDEE21?style=plastic&logo=apachespark&logoColor=black) ![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=plastic&logo=apachekafka) ![Apache Hadoop](https://img.shields.io/badge/Apache%20Hadoop-66CCFF?style=plastic&logo=apachehadoop&logoColor=black) ![Apache Hive](https://img.shields.io/badge/Apache%20Hive-FDEE21?style=plastic&logo=apachehive&logoColor=black) ![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=plastic&logo=astro&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=plastic&logo=opencv&logoColor=white) ![RabbitMQ](https://img.shields.io/badge/rabbitmq-FF6600?style=plastic&logo=rabbitmq&logoColor=white) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=plastic&logo=apache&logoColor=white) ![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=plastic&logo=Apache%20Airflow&logoColor=white) ![Apache Flink](https://img.shields.io/badge/Apache%20Flink-E6526F?style=plastic&logo=Apache%20Flink&logoColor=white) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=plastic&logo=Apache%20Maven&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=plastic&logo=mongodb&logoColor=white) ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=plastic&logo=microsoft%20sql%20server&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=plastic&logo=postgresql&logoColor=white) ![AmazonDynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=plastic&logo=Amazon%20DynamoDB&logoColor=white) ![ApacheCassandra](https://img.shields.io/badge/cassandra-%231287B1.svg?style=plastic&logo=apache-cassandra&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=plastic&logo=figma&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=plastic&logo=Matplotlib&logoColor=black) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=plastic&logo=numpy&logoColor=blue) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=plastic&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=plastic&logo=plotly&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=plastic&logo=scipy&logoColor=%white) ![GitLab CI](https://img.shields.io/badge/gitlab%20CI-%23181717.svg?style=plastic&logo=gitlab&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=plastic&logo=githubactions&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=plastic&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=plastic&logo=github&logoColor=white) ![Confluence](https://img.shields.io/badge/confluence-%23172BF4.svg?style=plastic&logo=confluence&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=plastic&logo=docker&logoColor=white) ![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=plastic&logo=grafana&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=plastic&logo=jira&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=plastic&logo=postman&logoColor=white) ![SonarLint](https://img.shields.io/badge/SonarLint-CB2029?style=plastic&logo=SONARLINT&logoColor=white) ![SonarQube](https://img.shields.io/badge/SonarQube-black?style=plastic&logo=sonarqube&logoColor=4E9BCD) ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=plastic&logo=terraform&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=gxs282&theme=default&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=gxs282&theme=default&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=gxs282&theme=default&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=gxs282&theme=radical&no-frame=false&no-bg=false&margin-w=4)
-
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
-
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=gxs282&limit=5&theme=dark&combine_all_yearly_contributions=true)
+The goal is not just to move data, but to **own data reliability end-to-end**.
 
 ---
-[![](https://visitcount.itsvg.in/api?id=gxs282&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## Problem Statement
+Enterprise analytics platforms must handle:
+- High-volume transactional data
+- Incremental and late-arriving updates
+- Reprocessing and backfill scenarios
+- Strict data quality and governance requirements
+- Cost and performance constraints at scale
+
+This project addresses these challenges by implementing a **layered Lakehouse architecture** with explicit strategies for **incremental ingestion, Delta-based upserts, data validation, and operational observability**.
+
+---
+
+## Architecture Overview
+
+**Architecture Pattern:** Bronze → Silver → Gold (Lakehouse)
+
+- **Bronze:** Raw, append-only ingestion with minimal transformation  
+- **Silver:** Cleaned, deduplicated, incrementally merged datasets  
+- **Gold:** Business-ready aggregates optimized for analytics consumption  
+
+Key characteristics:
+- Delta Lake for ACID guarantees and time travel
+- Idempotent processing to support retries
+- Explicit separation of concerns across layers
+
+(Architecture diagrams and detailed design decisions are documented in `/architecture`.)
+
+---
+
+## Incremental Processing Strategy
+This platform is built around **incremental-first design**, not full reloads.
+
+### Ingestion
+- Uses watermark-based filtering on update timestamps
+- Supports late-arriving data
+- Ensures idempotency across re-runs
+
+### Transformation
+- Delta `MERGE` operations for upserts
+- Primary-key-based deduplication
+- Soft delete handling where applicable
+
+### Reprocessing
+- Supports targeted reprocessing (single day / partition)
+- Supports historical backfills
+- Prevents duplication during retries
+
+Detailed strategy is documented in `docs/incremental-strategy.md`.
+
+---
+
+## Data Quality & Validation
+Data quality is treated as a **first-class responsibility**, not an afterthought.
+
+Implemented checks include:
+- Primary key non-null enforcement
+- Referential integrity validation
+- Schema drift detection
+- Volume anomaly checks between layers
+
+Failures are surfaced early to prevent downstream impact.
+
+---
+
+## Observability & Operational Readiness
+The platform exposes operational signals required for production ownership:
+- Row counts per layer
+- Processing timestamps
+- Job execution metrics
+- Failure logging for root-cause analysis
+
+These metrics enable:
+- Faster incident detection
+- Safer reprocessing
+- Confidence in downstream consumption
+
+---
+
+## Orchestration
+The pipeline is orchestrated using a **DAG-based workflow**, supporting:
+- Dependency management
+- Retries and failure handling
+- Controlled backfills
+
+The orchestration layer is intentionally decoupled from transformation logic.
+
+---
+
+## Configuration & Environment Management
+- Environment-specific configs (`dev`, `prod`)
+- No hardcoded environment assumptions
+- Designed for CI/CD and promotion across environments
+
+---
+
+## Repository Structure
+
+create this repo structure:
+
+enterprise-lakehouse-platform/
+│
+├── README.md
+├── architecture/
+│   ├── architecture-diagram.png
+│   └── design-decisions.md
+│
+├── src/
+│   ├── ingestion/
+│   │   └── ingest_raw.py
+│   ├── transformations/
+│   │   ├── bronze_to_silver.py
+│   │   └── silver_to_gold.py
+│   ├── quality/
+│   │   └── data_quality_checks.py
+│   ├── utils/
+│   │   ├── spark_session.py
+│   │   └── config_loader.py
+│
+├── sql/
+│   ├── silver_tables.sql
+│   └── gold_tables.sql
+│
+├── orchestration/
+│   └── some.py
+│
+├── configs/
+│   ├── dev.yaml
+│   └── prod.yaml
+│
+├── tests/
+│   └── test_transformations.py
+│
+└── docs/
+    ├── incremental-strategy.md
+    ├── reprocessing.md
+    └── cost-optimization.md
+
+
+This structure mirrors **enterprise data platform repositories** rather than notebook-driven projects.
+
+---
+
+## Scalability & Cost Considerations
+- Partition-aware processing
+- Avoids unnecessary full scans
+- Incremental MERGE strategies to reduce compute usage
+- Designed to scale to large datasets without architectural changes
+
+Cost and performance trade-offs are explicitly documented in `docs/cost-optimization.md`.
+
+---
+
+## Technology Stack
+- Apache Spark
+- Delta Lake
+- Python
+- SQL
+- Workflow Orchestration (DAG-based)
+- Cloud-native storage (Lakehouse-compatible)
+
+---
+
+## Future Enhancements
+- Change Data Capture (CDC) ingestion
+- Automated anomaly detection (SPC-style checks)
+- Metadata-driven pipeline execution
+- Column-level lineage and governance integration
+- CI/CD automation for data pipelines
+
+---
+
+## Why This Project
+This repository is intentionally designed to demonstrate:
+- Senior-level ownership of data systems
+- Platform-oriented thinking over script-based pipelines
+- Real-world production trade-offs
+- Readiness for enterprise data engineering roles
+
+This is not a demo—it is a **reference implementation**.
